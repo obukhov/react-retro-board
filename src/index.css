@@ -1,0 +1,30 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+}
+
+.retro-board {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+    background-color: #EEE;
+}
+
+.retro-column {
+    background-color: blueviolet;
+    margin: 5px;
+    flex-grow: 1;
+}
+
+.retro-column .header {
+    text-align: center;
+    color: white;
+}
+
+.retro-card {
+    min-height: 50px;
+    padding: 10px;
+    margin: 5px;
+    background-color: burlywood;
+}
