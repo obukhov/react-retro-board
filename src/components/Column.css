@@ -1,0 +1,14 @@
+.retro-column {
+    background-color: rgb(187, 113, 255);
+    margin: 5px;
+    flex-grow: 1;
+}
+
+.retro-column .header {
+    text-align: center;
+    color: white;
+}
+
+.retro-column button {
+    margin: 5px;
+}

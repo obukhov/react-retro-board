@@ -1,0 +1,13 @@
+.retro-card-form {
+    min-height: 50px;
+    padding: 10px;
+    margin: 5px;
+    background-color: burlywood;
+}
+
+.retro-card-form textarea {
+    width: 100%;
+    margin: 0;
+    padding: 2px;
+    height: 100px;
+}
