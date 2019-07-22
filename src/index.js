@@ -9,7 +9,9 @@ const store = createStore(rootReducer)
 
 ReactDOM.render(
     <Provider store={store}>
-        <Retro />
+        <Retro 
+        columns = {[{id: 1, name: 'Start'}, {id: 2, name: 'Stop'}, {id: 3, name: 'Continue'}]}
+        />
     </Provider>,
     document.getElementById('root')
 )

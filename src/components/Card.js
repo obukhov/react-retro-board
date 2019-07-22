@@ -1,12 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './Card.css'
 
-class Card extends Component {
-    render() {
-        return (
-            <div className="retro-card">{this.props.text}</div>
-        )
-    }
+function Card(props)  {
+    return (
+        <div className="retro-card">
+            <div>{props.text}</div>
+            <small>{props.id}</small>
+        </div>
+    )
 }
 
 export default Card

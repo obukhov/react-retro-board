@@ -5,9 +5,8 @@ export const actions = {
     // EDIT_CARD_TEXT = 'EDIT_CARD_TEXT'
 }
 
-export const addCardFrom = (id, column, text) => ({
+export const addCard = (column, text) => ({
     type: actions.ADD_CARD,
-    id,
     column,
     text
 })
