@@ -2,6 +2,7 @@
     background-color: rgb(187, 113, 255);
     margin: 5px;
     flex-grow: 1;
+    flex-basis: 20%;
 }
 
 .retro-column .header {
