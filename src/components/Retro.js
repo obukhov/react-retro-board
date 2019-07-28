@@ -3,11 +3,10 @@ import Column from './Column'
 import './Retro.css'
 
 function Retro (props) {
-    const columns = props.columns.map((item, i) =>
+    const columns = props.columns.map((column, i) =>
         <Column
-            key={item.id}
-            columnId={item.id}
-            header={item.name}
+            key={column.id}
+            {...column}
         />
     )
 

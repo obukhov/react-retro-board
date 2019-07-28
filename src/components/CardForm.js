@@ -1,36 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { useDispatch } from 'react-redux'
 import './CardForm.css'
+import { updateCard, setCardEditMode } from '../actions'
 
-class CardForm extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            text: '',
-            len: 0
-        }
-    }
+function CardForm(props) {
+    const dispatch = useDispatch()
 
-    render() {
-        return (
-            <div className="retro-card-form">
-                <textarea onChange={(e) => this.changeText(e)} value={this.state.text} />
-                <div>
-                    <button onClick={(e) => this.addCard()}>Add</button>
-                    <button onClick={this.props.hideFormCallback}>Cancel</button>
-                    <span>{this.state.len}</span>
-                </div>
+    return (
+        <div className="retro-card-form">
+            <textarea onChange={(e) => dispatch(updateCard(props.id, e.currentTarget.value))} value={props.text} />
+            <div>
+                <button onClick={() => dispatch(setCardEditMode(props.id, false))}>Save</button>
+                <span>{props.text.length}</span>
             </div>
-        )
-    }
-    addCard() {
-        this.props.addCardCallback(this.state.text)
-    }
-    changeText(e) {
-        this.setState({
-            text: e.target.value,
-            len: e.target.value.length
-        })
-    }
+        </div>
+    )
 }
 
 export default CardForm
