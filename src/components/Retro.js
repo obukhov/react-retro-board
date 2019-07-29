@@ -3,7 +3,7 @@ import Column from './Column'
 import './Retro.css'
 
 function Retro (props) {
-    const columns = props.columns.map((column, i) =>
+    const columns = props.columns.map(column =>
         <Column
             key={column.id}
             {...column}

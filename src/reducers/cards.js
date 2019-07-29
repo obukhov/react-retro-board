@@ -14,7 +14,7 @@ const cards = (state = [], action) => {
                 }
             ]
         case actions.DELETE_CARD:
-            return state.filter(card => (card.id !== action.id))
+            return state.filter(card => card.id !== action.id)
 
         case actions.UPDATE_CARD_TEXT:
             return state.map(card => card.id === action.id ? { ...card, text: action.text } : card);
